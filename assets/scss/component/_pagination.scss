@@ -1,0 +1,49 @@
+@use "../global" as g;
+/*!
+wp-pagenavi styling
+------------------------------
+*/
+.wp-pagenavi {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  a,
+  span {
+    // デフォルトスタイルをリセット
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+    // 既存デザインを適用
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-bg-gray);
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .nextpostslink {
+    font-size: 0px;
+    @include g.arrow();
+  }
+
+  .previouspostslink {
+    font-size: 0px;
+    @include g.arrow(-135deg);
+  }
+
+  .current {
+    background-color: var(--color-bg-black);
+    color: var(--color-font-white);
+  }
+
+  .pages {
+    display: none;
+  }
+}

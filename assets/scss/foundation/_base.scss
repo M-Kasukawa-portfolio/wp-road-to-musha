@@ -1,0 +1,44 @@
+@use "../global" as g;
+
+/*!
+foundation > base
+------------------------------
+*/
+body {
+  line-height: 1.75;
+  font-size: 14px;
+  color: var(--color-font-base);
+  font-family: var(--font-family-base);
+
+  @include g.mq() {
+    font-size: 16px;
+  }
+}
+
+//リセットcssを上書き
+body strong {
+  font-weight: bold;
+}
+
+.single-article a {
+  text-decoration: underline;
+}
+
+main ol,
+main ul {
+  list-style: revert;
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+main .wp-block-quote {
+  background-color: var(--color-bg-lightgray);
+  color: var(--color-font-gray);
+  padding: 16px;
+  border-radius: 12px;
+  margin: 32px 0;
+}
+
+main .wp-block-quote p {
+  margin: 0;
+}
